@@ -15,5 +15,6 @@ namespace ConlagoS_PruebaProgeso1.Data
         }
 
         public DbSet<ConlagoS_PruebaProgeso1.Models.Cliente> Cliente { get; set; } = default!;
+        public DbSet<ConlagoS_PruebaProgeso1.Models.Reserva> Reserva { get; set; } = default!;
     }
 }
