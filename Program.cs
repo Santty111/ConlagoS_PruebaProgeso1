@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using ConlagoS_PruebaProgeso1.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<ConlagoS_PruebaProgeso1Context>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ConlagoS_PruebaProgeso1Context") ?? throw new InvalidOperationException("Connection string 'ConlagoS_PruebaProgeso1Context' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
